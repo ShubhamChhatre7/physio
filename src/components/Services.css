@@ -1,0 +1,288 @@
+/* Base styles */
+.rehab-services-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#F9FAFB 0%, #E0FBE2 100%);
+  position: relative;
+}
+
+/* Hero section */
+.rehab-hero {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.rehab-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.rehab-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rehab-hero-text {
+  color: white;
+  text-align: center;
+  max-width: 800px;
+}
+
+.rehab-hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rehab-hero-text p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Main content */
+.rehab-main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+/* Introduction section */
+.rehab-intro-section {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.rehab-intro-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rehab-intro-section p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Services grid */
+.rehab-services-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Service card */
+.rehab-service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  backdrop-filter: blur(10px);
+}
+
+.rehab-service-card.rehab-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rehab-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rehab-service-icon-wrapper {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.rehab-service-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: lightgreen;
+}
+
+.rehab-service-category {
+  margin-bottom: 1rem;
+}
+
+.rehab-service-category span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color:lightgreen;
+  background-color: rgba(235, 248, 255, 0.8);
+  border-radius: 2rem;
+}
+
+.rehab-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.rehab-service-card p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Call to action section */
+.rehab-cta-section {
+  margin-top: 5rem;
+}
+
+.rehab-cta-content {
+  background-color: #73EC8B;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.rehab-cta-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rehab-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.rehab-cta-button {
+  background-color: white;
+  color: #4299e1;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rehab-cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes rehab-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rehab-slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rehab-bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rehab-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
+.rehab-fade-in {
+  animation: rehab-fadeIn 1s ease-out forwards;
+}
+
+.rehab-slide-in {
+  animation: rehab-slideIn 1s ease-out forwards;
+}
+
+.rehab-bounce-in {
+  animation: rehab-bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.rehab-pulse {
+  animation: rehab-pulse 2s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .rehab-hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .rehab-hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .rehab-intro-section h2 {
+    font-size: 2rem;
+  }
+
+  .rehab-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rehab-main-content {
+    padding: 3rem 1rem;
+  }
+
+  .rehab-cta-content {
+    padding: 2rem 1rem;
+  }
+}

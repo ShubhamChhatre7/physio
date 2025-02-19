@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --text-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --card-background: #ffffff;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-panel {
+    max-width: 1200px;
+    width: 95%;
+    margin: 9rem auto;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .admin-panel-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .admin-panel h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .admin-panel-content {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .patients-list,
+  .edit-patient-form {
+    flex: 1;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patients-list h3,
+  .edit-patient-form h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .patients-list ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .patients-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    margin: 0.75rem 0;
+    padding: 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .patients-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-patient-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .edit-patient-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .loading {
+    text-align: center;
+    color: var(--primary-color);
+    font-style: italic;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .admin-panel-content {
+      flex-direction: column;
+    }
+  }
+  
+  .patient-info{
+    font-size: 25px;
+  }

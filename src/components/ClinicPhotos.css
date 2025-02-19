@@ -1,0 +1,167 @@
+/* Main container styles */
+.clinic-photos {
+    padding: 40px 20px;
+    max-width: 100%;
+    margin: 5.2rem auto;
+    background: linear-gradient(135deg,#F9FAFB 0%, #E0FBE2 100%);
+  }
+  
+  .clinic-photos h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  
+  /* Photo grid layout */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  /* Individual photo card styles */
+  .photo-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 4/3;
+  }
+  
+  .photo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Overlay styles */
+  .photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-card:hover .photo-overlay {
+    transform: translateY(0);
+  }
+  
+  .photo-overlay h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .clinic-photos {
+      padding: 20px 10px;
+    }
+  
+    .clinic-photos h1 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      text-align: center;}}
+
+     
+
+
+      * {
+        box-sizing: border-box;
+      }
+      /* Gallery Styles */
+.gallery {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery Image */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay Effect */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay Text */
+.overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.overlay p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 10px;
+}
+
+     

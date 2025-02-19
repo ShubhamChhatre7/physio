@@ -1,0 +1,52 @@
+.patient-panel {
+    max-width: 800px;
+    width: 90%;
+    margin: 19rem auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .patient-panel h2 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .patient-panel p {
+    background-color: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #34495e;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  
+  .patient-panel p:nth-child(odd) {
+    background-color: #f1f4f7;
+  }
+  
+  .patient-panel .loading,
+  .patient-panel .no-data {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .patient-panel {
+      margin: 70% auto;
+      padding: 10px;
+      width: 95%;
+    }
+  
+    .patient-panel p {
+      padding: 8px;
+    }
+  }

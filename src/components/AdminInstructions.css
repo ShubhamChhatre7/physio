@@ -1,0 +1,124 @@
+/* Container Styles */
+.admin-instructions-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .admin-instructions-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  
+  .admin-instructions-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 3px;
+  }
+  
+  /* Section Styles */
+  .admin-section {
+    background: #ffffff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .admin-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .admin-section h2 {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+  
+  .admin-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-section li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    color: #5d6d7e;
+  }
+  
+  .admin-section li::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+  }
+  
+  .admin-section strong {
+    color: #34495e;
+    font-weight: 600;
+  }
+  
+  /* Important Notes Section */
+  .admin-important-notes {
+    background: linear-gradient(145deg, #fff9ec, #fff5e6);
+    border-left: 5px solid #f39c12;
+  }
+  
+  .admin-important-notes h2 {
+    color: #d35400;
+  }
+  
+  .admin-important-notes li::before {
+    color: #f39c12;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-instructions-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .admin-instructions-title {
+      font-size: 2rem;
+    }
+  
+    .admin-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Animation for sections */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .admin-section {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
